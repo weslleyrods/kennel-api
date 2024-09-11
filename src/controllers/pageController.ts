@@ -1,18 +1,17 @@
 import {Request, Response } from 'express';
 
-
-export const home = (res: Response, req: Request) => {
+export const home = (req: Request, res: Response) => {
   res.render('pages/page')
 }
 
-export const dogs = (res: Response, req: Request) => {
-  res.render('pages/dogs')
+export const dogs = (req: Request, res: Response)  => {
+  res.send('pages/dogs')
 }
 
-export const cats = (res: Response, req: Request) => {
+export const cats = (req: Request, res: Response) => {
   res.render('pages/cats')
 }
 
-export const fishes = (res: Response, req: Request) => {
+export const fishes = (req: Request, res: Response)  => {
   res.render('pages/fishes')
 }
