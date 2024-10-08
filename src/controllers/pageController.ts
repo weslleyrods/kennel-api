@@ -1,6 +1,8 @@
 import {Request, Response } from 'express';
 import { createMenuObject } from '../helpers/menuObject'
 
+import { Pet } from '../models/pets';
+
 export const home = (req: Request, res: Response) => {
   res.render('pages/page', {
     menu: createMenuObject(''),
@@ -12,12 +14,15 @@ export const home = (req: Request, res: Response) => {
 }
 
 export const dogs = (req: Request, res: Response)  => {
+  let pets = Pet.getAll();
+
   res.render('pages/page', {
     menu: createMenuObject('dog'),
     banner: {
       title: 'Todos os cachorros',
       background: 'banner_dog.jpg'
-    }
+    },
+    pets
   })
 }
 
