@@ -139,7 +139,7 @@ export const Pet = {
     return data.filter(item => item.type === type);
   },
 
-  getFromName: (name: string): Pet | undefined => {
-    return data.find(item => item.name.toLowerCase() === name.toLowerCase());
+  getFromName: (name: string): Pet[] => {
+    return data.filter(item => item.name.toLocaleLowerCase().indexOf(name.toLowerCase()) > -1);
   }
 }

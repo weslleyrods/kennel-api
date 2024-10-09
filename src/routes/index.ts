@@ -8,7 +8,6 @@ route.get('/', PageController.home);
 route.get('/dogs', PageController.dogs);
 route.get('/cats', PageController.cats);
 route.get('/fishes', PageController.fishes);
-
 route.get('/search', SearchController.search);
 
 
